@@ -24,7 +24,14 @@ mp_draw = mp.solutions.drawing_utils
 
 class GestureCanvas(VideoProcessorBase):
     def __init__(self):
-        self.hands = mp_hands.Hands(max_num_hands=1)
+
+        self.hands = mp_hands.Hands(
+            static_image_mode=False,
+            max_num_hands=1,
+            min_detection_confidence=0.5,
+            min_tracking_confidence=0.5
+        )
+
         self.canvas = None
         self.prev_x, self.prev_y = None, None
 
@@ -60,10 +67,13 @@ class GestureCanvas(VideoProcessorBase):
                 if up or left or right:
                     if self.prev_x is None:
                         self.prev_x, self.prev_y = x, y
-                    cv2.line(self.canvas,
-                             (self.prev_x, self.prev_y),
-                             (x, y),
-                             (0, 0, 0), 10)
+                    cv2.line(
+                        self.canvas,
+                        (self.prev_x, self.prev_y),
+                        (x, y),
+                        (0, 0, 0),
+                        10
+                    )
                     self.prev_x, self.prev_y = x, y
                 else:
                     self.prev_x, self.prev_y = None, None
@@ -114,8 +124,10 @@ class GestureCanvas(VideoProcessorBase):
         return av.VideoFrame.from_ndarray(combined, format="bgr24")
 
 
+
 webrtc_streamer(
     key="gesture-canvas",
     video_processor_factory=GestureCanvas,
     media_stream_constraints={"video": True, "audio": False},
+    async_processing=True,
 )
