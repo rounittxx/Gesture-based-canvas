@@ -4,10 +4,8 @@ emoji: ✋
 colorFrom: blue
 colorTo: purple
 sdk: streamlit
-sdk_version: 1.53.0
-python_version: 3.1
----
-
+sdk_version: 1.32.2
+python_version: 3.10
 ---
 
 # Welcome to Streamlit!
