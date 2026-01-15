@@ -5,7 +5,7 @@ colorFrom: blue
 colorTo: purple
 sdk: streamlit
 sdk_version: 1.32.2
-python_version: 3.10
+python_version: 3.10.13
 ---
 
 
