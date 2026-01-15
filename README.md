@@ -8,6 +8,7 @@ sdk_version: 1.32.2
 python_version: 3.10
 ---
 
+
 # Welcome to Streamlit!
 
 Edit `/src/streamlit_app.py` to customize this app to your heart's desire. :heart:
