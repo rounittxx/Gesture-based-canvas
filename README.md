@@ -1,17 +1,37 @@
----
-title: Gesture Based Canvas
-emoji: ✋
-colorFrom: blue
-colorTo: purple
-sdk: streamlit
-sdk_version: 1.32.2
-python_version: 3.10.13
+# Gesture-Based Virtual Drawing Canvas 
+
+A real-time gesture-controlled drawing application that allows users to draw, erase, and reset a virtual canvas using hand gestures captured via webcam.
+
 ---
 
+## Features
+- Real-time hand tracking using MediaPipe
+- Gesture-based drawing and erasing
+- Double-fist gesture to reset canvas
+- Smooth drawing with persistent canvas
+- Secure webcam access using HTTPS
 
-# Welcome to Streamlit!
+---
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire. :heart:
+## Tech Stack
+- Python
+- OpenCV
+- MediaPipe
+- Streamlit
+- Docker
+- ngrok
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+---
+
+## How It Works
+- Index finger movement is tracked for drawing
+- Specific hand gestures trigger erase and reset actions
+- Canvas is overlaid on live webcam feed
+
+---
+
+## Run Locally with Docker (Recommended)
+
+### 1. Build Docker Image
+```bash
+docker build -t gesture-canvas .
