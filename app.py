@@ -16,7 +16,7 @@ from Utils.coordinate_control import (
 from Utils.features import draw, erase_with_circle, reset, colors
 
 st.set_page_config(page_title="Gesture Canvas", layout="wide")
-st.title("Gesture Based Drawing Canvas")
+st.title("✋ Gesture Based Drawing Canvas")
 
 mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
@@ -63,14 +63,14 @@ class GestureCanvas(VideoProcessorBase):
                     cv2.line(self.canvas,
                              (self.prev_x, self.prev_y),
                              (x, y),
-                             (0, 0, 0), 5)
+                             (0, 0, 0), 10)
                     self.prev_x, self.prev_y = x, y
                 else:
                     self.prev_x, self.prev_y = None, None
 
                 # ERASE
                 if erase:
-                    cv2.circle(self.canvas, (x, y), 20, (255, 255, 255), -1)
+                    cv2.circle(self.canvas, (x, y), 35, (255, 255, 255), -1)
                     self.prev_x, self.prev_y = None, None
 
                 # RESET (double fist)
