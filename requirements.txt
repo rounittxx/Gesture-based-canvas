@@ -1,6 +1,6 @@
 streamlit
 streamlit-webrtc
-mediapipe==0.10.31
+mediapipe==0.10.9
 numpy
 av
 protobuf==3.20.3
