@@ -2,7 +2,7 @@
 
 A real-time, hand gesture-controlled drawing application built with Python, MediaPipe, and Streamlit. Users can draw, erase, and clear a virtual canvas entirely through webcam-detected hand gestures — no mouse, stylus, or touch input required.
 
-Live demo: [gesture-based-canvas.streamlit.app](https://gesture-based-canvas.streamlit.app) *(replace with your deployed URL)*
+Live demo: [gesture-based-canvas-nqeopczkeobn4heuwnaoje.streamlit.app](https://gesture-based-canvas-nqeopczkeobn4heuwnaoje.streamlit.app) *(replace with your deployed URL)*
 
 ---
 
